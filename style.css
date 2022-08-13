@@ -1,0 +1,523 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Lato", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+nav {
+  background-image: radial-gradient(rgb(1, 1, 1), rgb(50, 50, 50));
+  color: white;
+  padding: 20px 50px;
+}
+.logo {
+  width: 150;
+  height: 50px;
+}
+.navtop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search {
+  display: flex;
+  align-items: center;
+  background-color: gray;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: none;
+}
+.searchinput {
+  background-color: transparent;
+  border: none;
+  margin-right: 20px;
+}
+
+.searchinput::placeholder {
+  color: lightgray;
+}
+.limitedoffer {
+  font-size: 20px;
+  border-bottom: 2px solid green;
+  cursor: pointer;
+}
+
+.navbottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menuitem {
+  margin-right: 50px;
+  cursor: pointer;
+  font-weight: 300;
+}
+.menuitem:hover {
+  font-weight: bold;
+  color: white;
+}
+
+.slider {
+  background: url("https://wallpaperaccess.com/full/13327.jpg");
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  overflow: hidden;
+}
+.sliderwrapper {
+  display: flex;
+  width: 500vw;
+  transition: all 1s ease-in-out;
+}
+.slideritem {
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  display: flex;
+  position: relative;
+}
+.sliderbg {
+  height: 750px;
+  width: 750px;
+  border-radius: 50%;
+
+  position: absolute;
+}
+.sliderimg {
+  z-index: 1;
+}
+.slidertitle {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+.sliderprice {
+  position: absolute;
+  top: 10%;
+  z-index: 1;
+  left: 10%;
+  font-size: 40px;
+  font-weight: 200;
+  text-align: center;
+  color: white;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+}
+.buybutton {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  right: 15%;
+  font-size: 30px;
+  font-weight: 900;
+  background: black;
+  color: white;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+.buybutton:hover {
+  background-color: white;
+  color: black;
+}
+.slideritem:nth-child(1) .sliderbg {
+  background-color: yellow;
+}
+
+.slideritem:nth-child(2) .sliderbg {
+  background-color: rgb(242, 71, 71);
+}
+
+.slideritem:nth-child(3) .sliderbg {
+  background-color: rgb(105, 252, 51);
+}
+
+.slideritem:nth-child(4) .sliderbg {
+  background-color: rgb(212, 58, 176);
+}
+
+.slideritem:nth-child(5) .sliderbg {
+  background-color: rgb(19, 193, 144);
+}
+
+.slideritem:nth-child(1) .sliderprice {
+  background-color: yellow;
+}
+.slideritem:nth-child(2) .sliderprice {
+  background-color: rgb(242, 71, 71);
+}
+
+.slideritem:nth-child(3) .sliderprice {
+  background-color: rgb(105, 252, 51);
+}
+
+.slideritem:nth-child(4) .sliderprice {
+  background-color: rgb(212, 58, 176);
+}
+
+.slideritem:nth-child(5) .sliderprice {
+  background-color: rgb(19, 193, 144);
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.featuresimg {
+  width: 50px;
+  height: 50px;
+}
+.featuretitle {
+  font-weight: 800;
+  font-style: 20px;
+  margin: 20px;
+}
+.featuredesc {
+  color: gray;
+  width: 50%;
+  height: 100px;
+}
+
+.product {
+  height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+}
+.payment {
+  width: 500px;
+  height: 590px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  top: 0%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 2px 50px;
+  display: none;
+  flex-direction: column;
+  -webkit-box-shadow: 13px 21px 5px -4px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 13px 21px 5px -4px rgba(0, 0, 0, 0.7);
+  box-shadow: 13px 21px 5px -4px rgba(0, 0, 0, 0.7);
+}
+.paytitle {
+  color: rgb(145 145 145);
+  font: 10px;
+}
+label {
+  font-size: 14px;
+  font-weight: 700;
+}
+.cardicons {
+  display: flex;
+}
+.cardicon {
+  margin-right: 20px;
+}
+.cardinfo {
+  display: flex;
+  justify-content: space-between;
+}
+.sm {
+  width: 30%;
+}
+.paybtnn {
+  position: absolute;
+
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background-color: green;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+}
+.close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background-color: gray;
+  color: white;
+  top: 10;
+  right: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px;
+}
+.payinput {
+  padding: 10px;
+  margin: 5px 0px;
+  border: none;
+  border-bottom: 2px solid darkgray;
+}
+.payinput::placeholder {
+  color: darkgray;
+}
+.prodimg {
+  width: 50%;
+}
+.prodetal {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  padding: 40px;
+}
+.protitle {
+  font-size: 75px;
+  font-weight: 1000;
+}
+.prodesc {
+  font-size: 24px;
+  color: gray;
+}
+.colors,
+.sizes {
+  display: flex;
+  margin-bottom: 20px;
+}
+.color {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: black;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.color:last-child {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: rgb(109, 22, 229);
+  margin-right: 20px;
+  cursor: pointer;
+}
+.size {
+  padding: 5px 20px;
+  border: 1px solid black;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.probtn {
+  float: right;
+  padding: 5px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.probtn:hover {
+  background-color: white;
+  color: black;
+}
+
+.gallery {
+  padding: 50px;
+  display: flex;
+}
+.galleryitem {
+  flex: 1;
+  padding: 30px;
+}
+.galleryimg {
+  width: 100%;
+}
+.season {
+  display: flex;
+}
+.nsitem {
+  flex: 1;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nsimg {
+  width: 100%;
+  height: 500px;
+}
+.nstitl {
+  font-size: 40px;
+}
+.nsbtn {
+  padding: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.footer {
+  display: flex;
+}
+
+.footerleft {
+  flex: 2;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.footerright {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.finput {
+  padding: 5px;
+}
+.fbtn {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+.ficons {
+  display: flex;
+}
+.ficon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.copyright {
+  font-weight: 200;
+  font-size: 19px;
+}
+.fmenututitle {
+  font-size: 26px;
+  font-weight: bold;
+}
+.femnukistitem {
+  margin-bottom: 10px;
+  color: darkgray;
+  cursor: pointer;
+}
+.fmenulist {
+  padding: 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    padding: 20px;
+  }
+  .search {
+    display: none;
+  }
+  .menuitem {
+    margin: 20px;
+    font-weight: 700;
+  }
+  .navbottom {
+    flex-wrap: wrap;
+  }
+  .slider {
+    background: url("https://wallpaperaccess.com/full/13327.jpg");
+    clip-path: none;
+    overflow: hidden;
+  }
+  .sliderimg {
+    width: 90%;
+  }
+  .sliderbg {
+    width: 100%;
+  }
+  .slidertitle {
+    display: none;
+  }
+  .sliderprice {
+    top: unset;
+    bottom: -48;
+    left: 0;
+  }
+  .buybutton {
+    bottom: 0;
+    right: 0;
+    top: unset;
+  }
+  .features {
+    flex-direction: column;
+  }
+  .feature {
+    margin: 9px;
+  }
+  .product {
+    clip-path: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .prodimg {
+    width: 80%;
+    height: 250px;
+  }
+  .prodetal {
+    width: 100%;
+    top: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  .protitle {
+    font-size: 50px;
+    margin: 0;
+  }
+  .gallery {
+    display: none;
+  }
+  .season {
+    flex-direction: column;
+  }
+  .nsitem:nth-child(2) {
+    padding: 30px;
+    justify-content: center;
+  }
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .footerleft {
+    padding: 20px;
+    width: 90%;
+  }
+  .footerright {
+    padding: 20px;
+    width: 90%;
+    align-items: center;
+    background-color: whitesmoke;
+  }
+  .payment {
+    width: 90%;
+    padding: 20px;
+  }
+  .copyright {
+    font-weight: bold;
+    font-size: 19px;
+  }
+}
